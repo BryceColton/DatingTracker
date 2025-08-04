@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import GoogleSignIn from '@/components/GoogleSignIn';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -93,6 +94,20 @@ export default function LoginPage() {
               {isLoading ? 'Signing In...' : 'Sign In'}
             </Button>
           </form>
+
+          {/* Divider */}
+          <div className="my-6 flex items-center">
+            <div className="flex-1 border-t border-gray-200"></div>
+            <span className="px-4 text-sm text-gray-500 bg-white">Or continue with</span>
+            <div className="flex-1 border-t border-gray-200"></div>
+          </div>
+
+          {/* Google Sign-In */}
+          <GoogleSignIn 
+            onSuccess={() => router.push('/dashboard')}
+            onError={(error) => setError(error)}
+            disabled={isLoading}
+          />
           
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

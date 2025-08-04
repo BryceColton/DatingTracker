@@ -10,7 +10,8 @@ import { Button } from '@/components/ui/button';
 const navItems = [
   { href: '/dashboard', label: 'Dashboard', icon: '📊' },
   { href: '/add-date', label: 'Add Date', icon: '➕' },
-  { href: '/history', label: 'Date History', icon: '📅' },
+  { href: '/calendar', label: 'Calendar', icon: '📅' },
+  { href: '/history', label: 'Date History', icon: '📋' },
   { href: '/insights', label: 'AI Insights', icon: '🤖' },
   { href: '/search', label: 'Search & Filter', icon: '🔍' },
 ];
